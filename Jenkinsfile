@@ -1,15 +1,11 @@
 pipeline {
-  agent {
-      label 'master'
-  }
-  stages {
-      stage ('Build') {
-        steps {
-            sh 'mvn clean package'
+
+    agent {label 'master'}
+    stages {
+        stage ('build') {
+            steps {
+                echo "SCM has been cloned"
+            }
         }
-      }
-
-  }
-
-
+    }
 }
