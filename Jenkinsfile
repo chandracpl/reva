@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                echo "SCM has been cloned"
+                sh 'mvn clean package'
             }
         }
     }
